@@ -8,13 +8,21 @@ spring:
 #    driverClassName: org.h2.Driver
 #    max-active: 15
 
-    # Postgres DB Config
-    url: 'jdbc:postgresql://157.230.12.128:5432/fhir'
+    # Postgres DB Config - Staging
+    url: 'jdbc:postgresql://198.199.83.202:25061/fhir?sslmode=require'
     #url: jdbc:h2:mem:test_mem
     username: pscore
-    password: $9T8qJ56_KskNA#
+    password: vlW9D5IRLkh7toau
     driverClassName: org.postgresql.Driver
     max-active: 15
+
+    # Postgres DB Config - Prod
+#    url: 'jdbc:postgresql://137.184.204.195:25060/fhir?sslmode=require'
+#    #url: jdbc:h2:mem:test_mem
+#    username: pscore
+#    password: CI2SoVnvWmAlauvG
+#    driverClassName: org.postgresql.Driver
+#    max-active: 15
 
     # database connection pool size
     hikari:
@@ -49,9 +57,10 @@ hapi:
 #   use_apache_address_strategy: false
 ### forces the use of the https:// protocol for the returned server address.
 ### alternatively, it may be set using the X-Forwarded-Proto header.
-#   use_apache_address_strategy_https: false
+   use_apache_address_strategy_https: true
 ### enable to set the Server URL
 #    server_address: http://hapi.fhir.org/baseR4
+    server_address: https://api.lafia.io/fhir
 #    defer_indexing_for_codesystems_of_size: 101
 #    implementationguides:
 ###    example from registry (packages.fhir.org)
