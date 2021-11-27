@@ -9,20 +9,20 @@ spring:
 #    max-active: 15
 
     # Postgres DB Config - Staging
-    url: 'jdbc:postgresql://198.199.83.202:25061/fhir?sslmode=require'
-    #url: jdbc:h2:mem:test_mem
-    username: pscore
-    password: vlW9D5IRLkh7toau
-    driverClassName: org.postgresql.Driver
-    max-active: 15
-
-    # Postgres DB Config - Prod
-#    url: 'jdbc:postgresql://137.184.204.195:25060/fhir?sslmode=require'
+#    url: 'jdbc:postgresql://198.199.83.202:25061/fhir?sslmode=require'
 #    #url: jdbc:h2:mem:test_mem
 #    username: pscore
-#    password: CI2SoVnvWmAlauvG
+#    password: vlW9D5IRLkh7toau
 #    driverClassName: org.postgresql.Driver
 #    max-active: 15
+
+    # Postgres DB Config - Prod
+    url: 'jdbc:postgresql://137.184.204.195:25060/fhir?sslmode=require'
+    #url: jdbc:h2:mem:test_mem
+    username: pscore
+    password: CI2SoVnvWmAlauvG
+    driverClassName: org.postgresql.Driver
+    max-active: 15
 
     # database connection pool size
     hikari:
