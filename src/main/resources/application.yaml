@@ -17,7 +17,7 @@ spring:
 #    max-active: 15
 
     # Postgres DB Config - Prod
-    url: 'jdbc:postgresql://137.184.204.195:25060/fhir'
+    url: 'jdbc:postgresql://prod-db-do-user-3558509-0.b.db.ondigitalocean.com:25060/fhir?sslmode=require'
     #url: jdbc:h2:mem:test_mem
     username: pscore
     password: CI2SoVnvWmAlauvG
@@ -26,7 +26,7 @@ spring:
 
     # database connection pool size
     hikari:
-      maximum-pool-size: 10
+      maximum-pool-size: 100
   jpa:
     properties:
       hibernate.format_sql: false
